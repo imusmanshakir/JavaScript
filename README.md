@@ -1,2 +1,2 @@
 # JavaScript
-A code repo for JavaScript Learning tutorial from zero to hero
+A repository for JavaScript tutorials, from beginner to advanced
