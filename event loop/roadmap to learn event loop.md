@@ -24,9 +24,9 @@
 │ ⚙️ Async Foundations  │ • Web APIs (browser)            │ Handle async operations like      │
 │                       │ • Node APIs (Node.js)            │ setTimeout, fetch, file reading  │
 ├───────────────────────┼──────────────────────────────────┼──────────────────────────────────┤
-│ ⏳ Queues             │ • Callback Queue (Macrotask)     │ Two holding areas for async     │
-│                       │ • Microtask Queue                │ tasks - Promises (micro) vs     │
-│                       │                                  │ setTimeout (macro)              │
+│ ⏳ Queues             │ • Callback Queue (Macrotask)     │ Two holding areas for async      │
+│                       │ • Microtask Queue                │ tasks - Promises (micro) vs      │
+│                       │                                  │ setTimeout (macro)               │
 ├───────────────────────┼──────────────────────────────────┼──────────────────────────────────┤
 │ 🔁 Event Loop         │ • Event Loop cycle              │ Controls when queued tasks move   │
 │                       │ • Task prioritization            │ back to call stack               │

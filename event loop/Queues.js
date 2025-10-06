@@ -239,3 +239,44 @@ button.addEventListener('click', () => {
 // Sync code → Microtasks → Animation Frames → Macrotasks → repeat.
 
 // This cycle prevents blocking, keeps the UI responsive, and defines how JavaScript schedules async code.
+
+//Bottom Note:
+
+/*
+SYNCHRONOUS CODE:                    ASYNCHRONOUS CODE:
+┌─────────────────┐                  ┌─────────────────┐
+│   CALL STACK    │ ←─────────────── │     WEB APIs    │
+│ • console.log   │                  │ • setTimeout    │
+│ • functions     │                  │ • fetch         │
+│ • calculations  │                  │ • event listeners│
+└─────────────────┘                  └─────────┬───────┘
+       │                                        │
+       │ Runs IMMEDIATELY                       │ Callbacks go to QUEUES
+       │ Never waits in queues                  ▼
+       │                                ┌─────────────────┐
+       │                                │     QUEUES      │
+       │                                │ • Microtasks    │
+       └───────────────────────────────▶│ • Macrotasks    │
+                                        └─────────────────┘
+                                        */
+
+//  The Truth:
+// ✅ Synchronous code = Runs immediately in Call Stack, never waits in queues
+
+// ✅ Asynchronous callbacks = Wait in queues (Microtask Queue or Callback Queue)
+
+// ✅ Event Loop = Moves callbacks from queues to Call Stack when empty                                       
+
+// SYNCHRONOUS CODE:
+//  - Executes immediately in Call Stack
+//  - Never goes to any queue
+//  - Blocks until finished
+
+//  ASYNCHRONOUS CALLBACKS:
+//  - Wait in queues (Microtask or Callback Queue) 
+//  - Only execute when Call Stack is empty
+//  - Never block other code
+
+//  EVENT LOOP:
+//  - Monitors Call Stack emptiness
+//  - Moves callbacks from queues to Call Stack
