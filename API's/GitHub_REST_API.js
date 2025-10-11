@@ -35,7 +35,6 @@ function getUserRepos(username) {
       });
     });
 }
-
 getUserRepos('imusmanshakir');
 
 // 3. Search Repositories

@@ -1,5 +1,5 @@
-// let myName = "hitesh     "
-// let mychannel = "chai     "
+// let myName = "Usman Malik"
+// let mychannel = "Usman's Channel"    "
 
 // console.log(myName.trueLength);
 
@@ -32,8 +32,8 @@ Array.prototype.heyUsman = function(){
 // inheritance
 
 const User = {
-    name: "chai",
-    email: "chai@google.com"
+    name: "Ali",
+    email: "ali@google.com"
 }
 
 const Teacher = {
@@ -53,15 +53,15 @@ const TASupport = {
 Teacher.__proto__ = User
 
 // modern syntax
-Object.setPrototypeOf(TeachingSupport, Teacher)
+Object.setPrototypeOf(TeachingSupport, Teacher);
 
-let anotherUsername = "ChaiAurCode     "
+let anotherUsername = "Sami Shahid";
 
-String.prototype.trueLength = function(){
-    console.log(`${this}`);
-    console.log(`True length is: ${this.trim().length}`);
-}
+String.prototype.trueLength = function () {
+  console.log(`${this}`);
+  console.log(`True length is: ${this.trim().length}`);
+};
 
-anotherUsername.trueLength()
-"usman".trueLength()
-"iceTea".trueLength()
+anotherUsername.trueLength();
+"usman".trueLength();
+"sami".trueLength();

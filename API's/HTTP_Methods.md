@@ -181,3 +181,40 @@ DELETE /posts/1         → Delete post with ID 1
 │  DELETE   │   ❌    │     ✅     │      ❌     │  204 No Content      │
 │           │         │             │              │                      │
 └───────────┴─────────┴─────────────┴──────────────┴──────────────────────┘
+
+
+📊 Meaningful Status Codes
+───────────────────────────────────────────────
+ Status Code Categories
+───────────────────────────────────────────────
+ Range   | Type           | Meaning
+─────────┼────────────────┼─────────────────────────────────────────────────────────────
+ 1xx     | Informational  | Request received, continuing process
+ 2xx     | Success        | Action successfully received, understood, and accepted
+ 3xx     | Redirection    | Further action needed to complete request
+ 4xx     | Client Error   | Request contains bad syntax or cannot be fulfilled
+ 5xx     | Server Error   | Server failed to fulfill valid request
+───────────────────────────────────────────────
+
+# Essential Status Codes You Must Know:
+
+// 2xx SUCCESS
+200 OK  // Standard success response
+201 Created  // Resource created successfully
+204 No Content  // Success but no content to return
+
+// 3xx REDIRECTION
+301 Moved Permanently  // Resource has new permanent URL
+304 Not Modified  // Resource not modified (caching)
+
+// 4xx CLIENT ERRORS
+400 Bad Request  // Malformed request
+401 Unauthorized  // Authentication required
+403 Forbidden  // Authenticated but not authorized
+404 Not Found  // Resource doesn't exist
+409 Conflict  // Resource conflict (e.g., duplicate email)
+422 Unprocessable Entity  // Validation errors
+
+// 5xx SERVER ERRORS
+500 Internal Server Error  // Generic server error
+503 Service Unavailable  // Server overloaded or down

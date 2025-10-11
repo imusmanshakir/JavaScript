@@ -1,0 +1,20 @@
+{
+  "name": "api-projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "First_API_Project.js",
+  "scripts": {
+    "start": "node First_API_Project.js",
+    "dev": "nodemon First_API_Project.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
