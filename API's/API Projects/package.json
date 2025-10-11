@@ -4,8 +4,8 @@
   "description": "",
   "main": "First_API_Project.js",
   "scripts": {
-    "start": "node First_API_Project.js",
-    "dev": "nodemon First_API_Project.js"
+    "start": "node Book_Store_API.js",
+    "dev": "nodemon Book_Store_API.js"
   },
   "keywords": [],
   "author": "",
