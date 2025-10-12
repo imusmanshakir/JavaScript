@@ -3,10 +3,9 @@ import helmet from 'helmet';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import 'dotenv/config';
-
 // Import routes
 import authRoutes from '../routes/auth.js';
-import todoRoutes from './routes/todos.js';
+import todoRoutes from '../routes/todo.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -47,13 +46,13 @@ app.get('/api/health', (req, res) => {
 });
 
 // 404 handler - using arrow function
-app.use('*', (req, res) => {
+// 404 handler - use a proper path or remove the path entirely
+app.use((req, res) => {
   res.status(404).json({
     success: false,
     message: `Route ${req.originalUrl} not found`
   });
 });
-
 // Error handling middleware
 app.use((error, req, res, next) => {
   console.error('Error:', error);
@@ -68,5 +67,5 @@ app.use((error, req, res, next) => {
 // Start server with modern syntax
 app.listen(PORT, () => {
   console.log(`🚀 Modern Todo API running on http://localhost:${PORT}`);
-  console.log(`📚 Environment: ${process.env.NODE_ENV || 'development'}`);
+  // console.log(`📚 Environment: ${process.env.NODE_ENV || 'development'}`);
 });

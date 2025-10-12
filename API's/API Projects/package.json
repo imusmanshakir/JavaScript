@@ -4,8 +4,11 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node To_Do_API.js",
-    "dev": "nodemon To_Do_API.js"
+    "start": "node src/1_To_Do_API.js",
+    "dev": "nodemon src/1_To_Do_API.js",
+
+    "start:bookstore": "node src/2_Book_Store_API.js",
+    "dev:bookstore": "nodemon src/2_Book_Store_API.js"
   },
   "keywords": [],
   "author": "",
