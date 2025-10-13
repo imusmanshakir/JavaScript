@@ -45,12 +45,22 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+app.get('/getResponse', (req, res) => {
+  res.json({
+    success: true,
+    message: '✅ Modern Todo API is running!',
+    timestamp: new Date().toISOString(),
+    version: '2.0.0',
+  });
+});
+
+
 // 404 handler - using arrow function
 // 404 handler - use a proper path or remove the path entirely
 app.use((req, res) => {
   res.status(404).json({
     success: false,
-    message: `Route ${req.originalUrl} not found`
+    message: `❌ ${req.originalUrl} not found`
   });
 });
 // Error handling middleware
