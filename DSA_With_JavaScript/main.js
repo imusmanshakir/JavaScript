@@ -1,8 +1,15 @@
-let a = 10;
-let b = 30;
+function countAllDigits(str) {
+  if (typeof str !== "string" || str.length === 0) {
+    return false;
+  }
 
-a = a ^ b;
-b = a ^ b;
-a = a ^ b;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] < '0' || str[i] > '9') {
+      return false;
+    }
+  }
+  return true;
+}
 
-console.log("a =", a, "b= ", b);
+const result = countAllDigits(1234);
+console.log(result);
