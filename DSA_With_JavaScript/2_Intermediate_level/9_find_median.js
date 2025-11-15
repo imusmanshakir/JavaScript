@@ -1,5 +1,5 @@
-function median(arr) {
-  arr = [...arr].sort((a,b) => a-b);
+function findMedian(arr) {
+  arr = [...arr].sort((a, b) => a - b);
 
   const mid = Math.floor(arr.length / 2);
 
@@ -10,5 +10,5 @@ function median(arr) {
   }
 }
 
-console.log(median([3, 10, 2, 6, 8])); // 6
-console.log(median([4, 8, 1, 9])); // 6
+const result = findMedian([1, 2, 3, 4, 5, 6]);
+console.log(result);
